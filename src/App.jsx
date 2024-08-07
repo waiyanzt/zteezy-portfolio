@@ -1,12 +1,15 @@
+import Footer from "./components/Footer";
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
-        Welcome to My Portfolio
-      </h1>
-      <p className="text-gray-600 dark:text-gray-300">
-        This background changes based on your system preferences!
-      </p>
+    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-950 text-black dark:text-white">
+      <header className="p-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold">ZTEEZY</h1>
+      </header>
+
+      <main className="flex-grow"></main>
+
+      <Footer />
     </div>
   );
 }

@@ -49,7 +49,7 @@ const LandingText = () => {
 
   useEffect(() => {
     if (phase === "typing") {
-      const newGreeting = "Hello👋";
+      const newGreeting = "Hello";
       if (greeting.length < newGreeting.length) {
         const timer = setTimeout(() => {
           setGreeting((prev) => newGreeting.slice(0, prev.length + 1));
@@ -77,7 +77,7 @@ const LandingText = () => {
             />
           </span>
           {phase === "typing" && <span className="animate-blink">|</span>}
-          {" I'm Wai Yan."}
+          {"👋 I'm Wai Yan."}
         </h1>
         <p className="text-2xl mb-4 tracking-wide text-[#c0caf5]">
           Online, I go by Zteezy/ztz. I'm a Software Engineer currently

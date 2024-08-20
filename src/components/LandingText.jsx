@@ -85,9 +85,23 @@ const LandingText = () => {
           Quantitative Finance and Mathematics.
         </p>
         <p className="text-2xl tracking-wide text-[#c0caf5]">
-          I've built enterprise-level systems, contributed to NetLink Trust in
-          Singapore, and led the development of a healthcare platform in a team.
-          As a self-taught trader, I made significant profits in
+          I've built enterprise-level systems, contributed to{" "}
+          <a
+            href="https://www.netlinktrust.com/"
+            target="_blank"
+            className="text-[#9d7cd8]"
+          >
+            NetLink Trust
+          </a>{" "}
+          in Singapore, and led the development of a{" "}
+          <a
+            href="https://github.com/zteezy19/CSIT321-FYP"
+            target="_blank"
+            className="text-[#9d7cd8]"
+          >
+            healthcare application
+          </a>{" "}
+          in a team. As a self-taught trader, I made significant profits in
           cryptocurrencies, focusing on assets in Solana and Ethereum.
         </p>
       </div>

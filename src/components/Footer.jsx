@@ -1,6 +1,6 @@
 const Footer = () => {
-  const latitude = "37.7749";
-  const longitude = "-122.4194";
+  const latitude = "1.3840";
+  const longitude = "103.7470";
 
   const handleLocationClick = () => {
     window.open(

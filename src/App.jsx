@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import LandingText from "./components/LandingText";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               path="/"
               element={
                 <>
+                  <LandingText />
                   <section id="work" className="py-10">
                     <h2 className="text-2xl font-bold mb-4">My Work</h2>
                     {/*Add your projects here*/}

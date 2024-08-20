@@ -62,6 +62,14 @@ const Navbar = () => {
         ) : (
           <div className="flex items-center space-x-8">
             <a
+              href="https://zteezy.me/"
+              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Blog
+            </a>
+            <a
               href="#work"
               className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
             >

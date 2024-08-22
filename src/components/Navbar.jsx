@@ -6,17 +6,32 @@ const Navbar = () => {
   const [showHomeButton, setShowHomeButton] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(
+        (prevScrollPos > currentScrollPos && currentScrollPos > 0) ||
+          currentScrollPos < 10
+      );
+      setPrevScrollPos(currentScrollPos);
+    };
+
     handleResize();
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -30,7 +45,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#1a1b26] p-4 w-full">
+    <nav
+      className={`bg-[#1a1b26] p-4 w-full fixed top-0 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-full mx-4 flex justify-between items-center">
         <div
           className="flex items-center"
@@ -67,7 +86,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Blog
+              My Thoughts
             </a>
             <a
               href="#work"

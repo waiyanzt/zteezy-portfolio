@@ -3,11 +3,12 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 import LandingText from "./components/LandingText";
+import MusicDashboard from "./components/MusicDashboard";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-[#1a1b26] text-white">
+      <div className="min-h-screen flex flex-col bg-[#1a1b26] text-[#a9b1d6]">
         <Navbar />
 
         <main className="flex-grow container mx-auto px-4">
@@ -32,6 +33,7 @@ function App() {
           </Routes>
         </main>
 
+        <MusicDashboard />
         <Footer />
       </div>
     </Router>

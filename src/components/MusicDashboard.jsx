@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const API_KEY = import.meta.env.VITE_LASTFM_API_KEY;
 const USERNAME = import.meta.env.VITE_LASTFM_USERNAME;
@@ -12,10 +12,10 @@ const MusicDashboard = () => {
       try {
         const [trackResponse, infoResponse] = await Promise.all([
           fetch(
-            `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`
+            `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`,
           ),
           fetch(
-            `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${USERNAME}&api_key=${API_KEY}&format=json`
+            `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${USERNAME}&api_key=${API_KEY}&format=json`,
           ),
         ]);
 

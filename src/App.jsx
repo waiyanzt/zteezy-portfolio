@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 import LandingText from "./components/LandingText";
 import MusicDashboard from "./components/MusicDashboard";
+import TwitterDashboard from "./components/TwitterDashboard";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-
+        <TwitterDashboard />
         <MusicDashboard />
         <Footer />
       </div>

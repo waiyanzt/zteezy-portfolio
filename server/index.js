@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import twitterRoutes from "./twitterRoutes.js";
+
 import lastfmRoutes from "./lastfmRoutes.js";
 
 dotenv.config();
@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/twitter", twitterRoutes);
 app.use("/api/lastfm", lastfmRoutes);
 
 app.get("/", (req, res) => {

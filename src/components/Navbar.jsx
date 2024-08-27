@@ -86,7 +86,15 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              My Thoughts
+              Notes
+            </a>
+            <a
+              href="https://github.com/zteezy19"
+              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
             </a>
             <a
               href="#work"

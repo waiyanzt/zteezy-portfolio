@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import pic1 from "../assets/profile-pic.jpg";
+import pic2 from "../assets/profile-pic2.jpg";
 
 const LandingText = () => {
   const [greeting, setGreeting] = useState("Mingalarbar");
   const [selectedChars, setSelectedChars] = useState(0);
   const [phase, setPhase] = useState("initial"); // "initial", "selecting", "selected", "deleting", "typing", "complete"
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (phase === "initial") {
@@ -62,7 +65,7 @@ const LandingText = () => {
   }, [phase, greeting]);
 
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center">
+    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-between">
       <div className="max-w-3xl ml-[5vw]">
         <h1 className="text-4xl font-bold mb-4 text-[#9d7cd8]">
           <span className="relative">
@@ -80,9 +83,8 @@ const LandingText = () => {
           {"👋 I'm Wai Yan."}
         </h1>
         <p className="text-2xl mb-4 tracking-wide text-[#c0caf5]">
-          Online, I go by Zteezy/ztz. I'm a Software Engineer currently
-          specializing in Distributed Systems, with a strong interest in
-          Quantitative Finance and Mathematics.
+          Online, I go by Zteezy/ztz. I'm a Software Engineer focusing on
+          distributed systems and web applications.
         </p>
         <p className="text-2xl tracking-wide text-[#c0caf5]">
           I've built enterprise-level systems, contributed to{" "}
@@ -93,17 +95,36 @@ const LandingText = () => {
           >
             NetLink Trust
           </a>{" "}
-          in Singapore, and led the development of a{" "}
-          <a
-            href="https://github.com/zteezy19/CSIT321-FYP"
-            target="_blank"
-            className="text-[#9d7cd8]"
-          >
-            healthcare application
-          </a>{" "}
-          in a team. As a self-taught trader, I made significant profits in
-          cryptocurrencies, focusing on assets in Solana and Ethereum.
+          in Singapore, and made significant profits in cryptocurrency trading,
+          focusing on Solana and Ethereum during the COVID-19 lockdowns. I'm now
+          preparing to study a Master's in Advanced Computing in Australia to
+          pursue a career in Quant Finance or Big Tech.
         </p>
+      </div>
+      {/* Modified image section */}
+      <div className="mr-[5vw]">
+        <div
+          className="w-64 h-64 rounded-full overflow-hidden cursor-pointer relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <img
+            src={pic1}
+            alt="Profile"
+            className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
+            style={{
+              opacity: isHovered ? 0 : 1,
+            }}
+          />
+          <img
+            src={pic2}
+            alt="Alt-Profile"
+            className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
+            style={{
+              opacity: isHovered ? 1 : 0,
+            }}
+          />
+        </div>
       </div>
     </section>
   );

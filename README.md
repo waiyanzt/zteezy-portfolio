@@ -4,5 +4,5 @@
 
 The color palette used to build this webpage was inspired by my favorite editor theme, which is the Tokyo Night theme.
 
-![Project Screenshot](/TokyoNightPalette.PNG
+![Project Screenshot](/TokyoNightPalette.png
 )

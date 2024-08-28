@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HomeIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [showHomeButton, setShowHomeButton] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -48,11 +49,8 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const goToHome = () => {
+    navigate("/");
   };
 
   const toggleMenu = () => {
@@ -75,7 +73,7 @@ const Navbar = () => {
             <h1 className="text-3xl text-[#7aa2f7] font-bold mr-2">ZTEEZY</h1>
             {showHomeButton && !isMobile && (
               <button
-                onClick={scrollToTop}
+                onClick={goToHome}
                 className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300"
               >
                 <HomeIcon className="h-6 w-6" />

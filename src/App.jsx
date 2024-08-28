@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import LandingText from "./components/LandingText";
 import MusicDashboard from "./components/MusicDashboard";
 import TwitterDashboard from "./components/TwitterDashboard";
+import HireMe from "./components/HireMe";
 
 function App() {
   return (
@@ -33,8 +34,19 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <TwitterDashboard />
-        <MusicDashboard />
+
+        <div className="mt-8">
+          <HireMe />
+        </div>
+
+        <div className="mt-8">
+          <TwitterDashboard />
+        </div>
+
+        <div className="mt-8 mb-8">
+          <MusicDashboard />
+        </div>
+
         <Footer />
       </div>
     </Router>

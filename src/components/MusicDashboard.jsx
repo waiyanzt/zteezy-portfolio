@@ -26,45 +26,55 @@ const MusicDashboard = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  if (error) return <div className="text-red-500">{error}</div>;
-  if (!trackInfo) return <div>Loading...</div>;
+  if (error)
+    return (
+      <div className="text-red-500 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+        {error}
+      </div>
+    );
+  if (!trackInfo)
+    return (
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">Loading...</div>
+    );
 
   return (
-    <a
-      href={`https://www.last.fm/user/${trackInfo.username}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block p-4  hover:bg-[#24263b] transition-colors duration-300 cursor-pointer"
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <img
-            src={trackInfo.trackInfo.albumArt}
-            alt={`${trackInfo.trackInfo.album} cover`}
-            className="w-24 h-24 mr-4 rounded-md shadow-lg"
-          />
-          <div>
-            <p className="font-bold text-base mb-2 text-[#b4f9f8]">
-              {trackInfo.trackInfo.nowPlaying
-                ? "ZTZ is currently blasting"
-                : "ZTZ last listened to"}
+    <div className="group hover:bg-[#24263b] transition-colors duration-300">
+      <a
+        href={`https://www.last.fm/user/${trackInfo.username}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block py-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 cursor-pointer"
+      >
+        <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+          <div className="flex items-center mb-4 md:mb-0">
+            <img
+              src={trackInfo.trackInfo.albumArt}
+              alt={`${trackInfo.trackInfo.album} cover`}
+              className="w-24 h-24 mr-4 rounded-md shadow-lg"
+            />
+            <div>
+              <p className="font-bold text-base mb-2 text-[#b4f9f8]">
+                {trackInfo.trackInfo.nowPlaying
+                  ? "ZTZ is currently blasting"
+                  : "ZTZ last listened to"}
+              </p>
+              <p className="font-bold text-lg">{trackInfo.trackInfo.name}</p>
+              <p className="text-base text-[#c0caf5]">
+                {trackInfo.trackInfo.artist}
+              </p>
+            </div>
+          </div>
+          <div className="text-right mt-4 md:mt-0">
+            <p className="text-[#3d59a1] text-2xl font-bold">
+              {trackInfo.totalScrobbles}
             </p>
-            <p className="font-bold text-lg">{trackInfo.trackInfo.name}</p>
-            <p className="text-base text-[#c0caf5]">
-              {trackInfo.trackInfo.artist}
+            <p className="text-[#7aa2f7] text-xl font-semibold">
+              Songs Listened
             </p>
           </div>
         </div>
-        <div className="text-right">
-          <p className="text-[#3d59a1] text-2xl font-bold">
-            {trackInfo.totalScrobbles}
-          </p>
-          <p className="text-[##7aa2f7] text-xl font-semibold">
-            Songs Listened
-          </p>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   );
 };
 

@@ -65,65 +65,68 @@ const LandingText = () => {
   }, [phase, greeting]);
 
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-between">
-      <div className="max-w-3xl ml-[5vw]">
-        <h1 className="text-4xl font-bold mb-4 text-[#9d7cd8]">
-          <span className="relative">
-            {greeting.split("").map((char, index) => (
-              <span key={index} className="relative z-10">
-                {char}
-              </span>
-            ))}
-            <span
-              className="absolute top-0 left-0 h-full bg-[#565f89] transition-all duration-100 z-0"
-              style={{ width: `${(selectedChars / greeting.length) * 100}%` }}
-            />
-          </span>
-          {phase === "typing" && <span className="animate-blink">|</span>}
-          {"👋 I'm Wai Yan."}
-        </h1>
-        <p className="text-2xl mb-4 tracking-wide text-[#c0caf5]">
-          Online, I go by Zteezy/ztz. I'm a Software Engineer focusing on
-          distributed systems and web applications.
-        </p>
-        <p className="text-2xl tracking-wide text-[#c0caf5]">
-          I've built enterprise-level systems, contributed to{" "}
-          <a
-            href="https://www.netlinktrust.com/"
-            target="_blank"
-            className="text-[#9d7cd8]"
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 py-8 md:py-16 lg:py-24">
+      <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between">
+        <div className="md:max-w-3xl mb-8 md:mb-0">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#9d7cd8]">
+            <span className="relative">
+              {greeting.split("").map((char, index) => (
+                <span key={index} className="relative z-10">
+                  {char}
+                </span>
+              ))}
+              <span
+                className="absolute top-0 left-0 h-full bg-[#565f89] transition-all duration-100 z-0"
+                style={{ width: `${(selectedChars / greeting.length) * 100}%` }}
+              />
+            </span>
+            {phase === "typing" && <span className="animate-blink">|</span>}
+            {"👋 I'm Wai Yan."}
+          </h1>
+          <p className="text-xl md:text-2xl mb-4 tracking-wide text-[#c0caf5]">
+            Online, I go by Zteezy/ztz. I'm a Software Engineer focusing on
+            distributed systems and web applications.
+          </p>
+          <p className="text-xl md:text-2xl tracking-wide text-[#c0caf5]">
+            I've built enterprise-level systems, contributed to{" "}
+            <a
+              href="https://www.netlinktrust.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#9d7cd8]"
+            >
+              NetLink Trust
+            </a>{" "}
+            in Singapore, and made significant profits in cryptocurrency
+            trading, focusing on Solana and Ethereum during the COVID-19
+            lockdowns. I'm now preparing to study a Master's in Advanced
+            Computing in Australia to pursue a career in Quant Finance or Big
+            Tech.
+          </p>
+        </div>
+        <div className="md:ml-8">
+          <div
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden cursor-pointer relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            NetLink Trust
-          </a>{" "}
-          in Singapore, and made significant profits in cryptocurrency trading,
-          focusing on Solana and Ethereum during the COVID-19 lockdowns. I'm now
-          preparing to study a Master's in Advanced Computing in Australia to
-          pursue a career in Quant Finance or Big Tech.
-        </p>
-      </div>
-      {/* Modified image section */}
-      <div className="mr-[5vw]">
-        <div
-          className="w-64 h-64 rounded-full overflow-hidden cursor-pointer relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <img
-            src={pic1}
-            alt="Profile"
-            className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
-            style={{
-              opacity: isHovered ? 0 : 1,
-            }}
-          />
-          <img
-            src={pic2}
-            alt="Alt-Profile"
-            className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
-            style={{
-              opacity: isHovered ? 1 : 0,
-            }}
-          />
+            <img
+              src={pic1}
+              alt="Profile"
+              className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
+              style={{
+                opacity: isHovered ? 0 : 1,
+              }}
+            />
+            <img
+              src={pic2}
+              alt="Alt-Profile"
+              className="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-2000 ease-in-out"
+              style={{
+                opacity: isHovered ? 1 : 0,
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import LandingText from "./components/LandingText";
 import MusicDashboard from "./components/MusicDashboard";
 import TwitterDashboard from "./components/TwitterDashboard";
 import HireMe from "./components/HireMe";
+import About from "./components/About";
 
 function App() {
   return (
@@ -22,10 +23,7 @@ function App() {
                   <h2 className="text-2xl font-bold mb-4">My Work</h2>
                   {/*Add your projects here*/}
                 </section>
-                <section id="about" className="py-10">
-                  <h2 className="text-2xl font-bold mb-4">About Me</h2>
-                  {/*Add your about content here*/}
-                </section>
+                <About />
                 <div className="mt-8">
                   <HireMe />
                 </div>

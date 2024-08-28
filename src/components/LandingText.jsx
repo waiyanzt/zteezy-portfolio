@@ -84,11 +84,12 @@ const LandingText = () => {
             {"👋 I'm Wai Yan."}
           </h1>
           <p className="text-xl md:text-2xl mb-4 tracking-wide text-[#c0caf5]">
-            Online, I go by Zteezy/ztz. I'm a Software Engineer focusing on
-            distributed systems and web applications.
+            Online, I go by Zteezy/ztz. I'm a Software Engineer and incoming
+            Master's student focusing on distributed systems and web
+            applications.
           </p>
           <p className="text-xl md:text-2xl tracking-wide text-[#c0caf5]">
-            I've built enterprise-level systems, contributed to{" "}
+            I've built enterprise-level systems and contributed to{" "}
             <a
               href="https://www.netlinktrust.com/"
               target="_blank"
@@ -97,11 +98,7 @@ const LandingText = () => {
             >
               NetLink Trust
             </a>{" "}
-            in Singapore, and made significant profits in cryptocurrency
-            trading, focusing on Solana and Ethereum during the COVID-19
-            lockdowns. I'm now preparing to study a Master's in Advanced
-            Computing in Australia to pursue a career in Quant Finance or Big
-            Tech.
+            in Singapore.
           </p>
         </div>
         <div className="md:ml-8">

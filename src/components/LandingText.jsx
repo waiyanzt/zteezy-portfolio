@@ -103,7 +103,7 @@ const LandingText = () => {
         </div>
         <div className="md:ml-8">
           <div
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden cursor-pointer relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden  relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

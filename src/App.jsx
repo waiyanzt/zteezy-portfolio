@@ -23,7 +23,10 @@ function App() {
                   <h2 className="text-2xl font-bold mb-4">My Work</h2>
                   {/*Add your projects here*/}
                 </section>
-                <About />
+                <section id="about">
+                  <About />
+                </section>
+
                 <div className="mt-8">
                   <HireMe />
                 </div>

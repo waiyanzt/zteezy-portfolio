@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HomeIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [showHomeButton, setShowHomeButton] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -57,6 +58,43 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavigation = (sectionId) => {
+    if (location.pathname === "/") {
+      // If we're on the home page, scroll to the section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If we're on another page, navigate to home and then scroll
+      navigate("/", { state: { scrollTo: sectionId } });
+    }
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+  };
+
+  // Effect to handle scrolling after navigation
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+      // Clear the state to prevent scrolling on subsequent renders
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
+
+  const navItems = [
+    { label: "Notes", href: "https://zteezy.me/", external: true },
+    { label: "Github", href: "https://github.com/zteezy19", external: true },
+    { label: "Work", action: () => handleNavigation("work") },
+    { label: "About", action: () => handleNavigation("about") },
+  ];
+
   return (
     <>
       <nav
@@ -94,34 +132,27 @@ const Navbar = () => {
             </button>
           ) : (
             <div className="flex items-center space-x-8">
-              <a
-                href="https://zteezy.me/"
-                className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Notes
-              </a>
-              <a
-                href="https://github.com/zteezy19"
-                className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github
-              </a>
-              <a
-                href="#work"
-                className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
-              >
-                Work
-              </a>
-              <a
-                href="#about"
-                className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
-              >
-                About
-              </a>
+              {navItems.map((item, index) =>
+                item.external ? (
+                  <a
+                    key={index}
+                    href={item.href}
+                    className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <button
+                    key={index}
+                    onClick={item.action}
+                    className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-lg"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
               <Link
                 to="/contact"
                 className="bg-[#bb9af7] hover:bg-[#9d7cd8] text-[#1a1b26] px-6 py-2 rounded-md transition-colors duration-300 text-lg font-medium"
@@ -136,38 +167,31 @@ const Navbar = () => {
       {isMobile && isMenuOpen && (
         <div className="fixed inset-0 bg-[#1a1b26] z-40 flex flex-col items-center justify-center">
           <div className="flex flex-col space-y-8 text-center">
-            <a
-              href="https://zteezy.me/"
-              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={toggleMenu}
-            >
-              Notes
-            </a>
-            <a
-              href="https://github.com/zteezy19"
-              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={toggleMenu}
-            >
-              Github
-            </a>
-            <a
-              href="#work"
-              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
-              onClick={toggleMenu}
-            >
-              Work
-            </a>
-            <a
-              href="#about"
-              className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
-              onClick={toggleMenu}
-            >
-              About
-            </a>
+            {navItems.map((item, index) =>
+              item.external ? (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={toggleMenu}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={index}
+                  onClick={() => {
+                    item.action();
+                    toggleMenu();
+                  }}
+                  className="text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors duration-300 text-2xl"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
             <Link
               to="/contact"
               className="bg-[#bb9af7] hover:bg-[#9d7cd8] text-[#1a1b26] px-6 py-2 rounded-md transition-colors duration-300 text-2xl font-medium inline-block"

@@ -330,8 +330,8 @@ const About = () => {
 
         <div className="bg-[#24283b] p-6 rounded-lg shadow-lg">
           <p className="text-[#ff757f] italic text-xl text-center">
-            "Though one may conquer a thousand times a thousand men in battle,
-            yet he indeed is the noblest victor who conquers himself." — Buddha
+            "We must all suffer one of two things: the pain of discipline or the
+            pain of regret and disappointment." — Jim Rohn
           </p>
         </div>
       </div>

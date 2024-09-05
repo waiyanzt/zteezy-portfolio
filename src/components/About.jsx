@@ -27,13 +27,13 @@ TechIcon.propTypes = {
 
 const About = () => {
   return (
-    <section id="about" className="py-10 bg-[#1a1b26]">
+    <section id="about" className="py-10 bg-[#24283b]">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8 text-[#9d7cd8]">About Me</h1>
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            My Journey
+            🌏 My Journey
           </h2>
           <p className="text-[#c0caf5] mb-4">
             My programming journey began unexpectedly during my Electrical &
@@ -71,7 +71,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            Technical Toolkit
+            🛠️ Technical Toolkit
           </h2>
           <p className="text-[#c0caf5] mb-4">
             My expertise lies in crafting scalable, responsive, and visually
@@ -94,7 +94,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            Aspirations and Goals
+            🌟 Goals & Aspirations
           </h2>
           <p className="text-[#c0caf5] mb-4">
             My current ambition is to break into quant finance as a Quantitative
@@ -122,7 +122,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            Future Horizons
+            🌠 Future Horizons
           </h2>
           <p className="text-[#c0caf5] mb-4">
             Looking ahead, I&apos;m excited about:
@@ -159,7 +159,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            My Development Environment
+            🧑🏻‍💻 My Dev Environment
           </h2>
           <p className="text-[#c0caf5]">
             Fun Fact: The color palette of this portfolio is inspired by my
@@ -195,7 +195,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            Beyond Coding
+            🌊 Hobbies
           </h2>
           <p className="text-[#c0caf5]">
             When I&apos;m not immersed in code, I enjoy diving into a wide range
@@ -209,7 +209,7 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            Resource Dump
+            📚 Resource Dump
           </h2>
           <p className="text-[#c0caf5] mb-4">
             Here are some resources I&apos;ve found invaluable and some in my
@@ -344,7 +344,7 @@ const About = () => {
           </ul>
         </div>
 
-        <div className="bg-[#24283b] p-6 rounded-lg shadow-lg">
+        <div className="bg-[#565f89] p-6 rounded-lg shadow-lg">
           <p className="text-[#ff757f] italic text-xl text-center">
             &quot;We must all suffer one of two things: the pain of discipline
             or the pain of regret and disappointment.&quot; — Jim Rohn

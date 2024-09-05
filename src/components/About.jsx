@@ -1,5 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { FaReact, FaNode, FaJs } from "react-icons/fa";
+import { IoTerminal } from "react-icons/io5";
 import {
   SiTypescript,
   SiCsharp,
@@ -12,11 +13,17 @@ import {
   SiRust,
   SiZig,
   SiC,
+  SiNvidia,
+  SiValve,
 } from "react-icons/si";
 
 const TechIcon = ({ Icon }) => (
   <Icon className="text-4xl text-[#c0caf5] hover:text-[#bb9af7] transition-colors duration-300" />
 );
+
+TechIcon.propTypes = {
+  Icon: PropTypes.elementType.isRequired,
+};
 
 const About = () => {
   return (
@@ -36,12 +43,12 @@ const About = () => {
             CSS, before embracing React.
           </p>
           <p className="text-[#c0caf5] mb-4">
-            As of late 2024, I'm setting my sights on a Master's Degree in
-            Australia, aiming to further hone my skills and pave the way for my
-            future goals in the tech industry.
+            As of late 2024, I&apos;m setting my sights on a Master&apos;s
+            Degree in Australia, aiming to further hone my skills and pave the
+            way for my future goals in the tech industry.
           </p>
           <p className="text-[#c0caf5]">
-            Beyond coding, I'm a practicing Theravada Buddhist who enjoys
+            Beyond coding, I&apos;m a practicing Theravada Buddhist who enjoys
             challenging video games like{" "}
             <a
               href="https://www.dota2.com/home"
@@ -51,14 +58,14 @@ const About = () => {
             >
               DOTA 2
             </a>{" "}
-            and Elden Ring. I'm also on a journey to master Mandarin, aiming for
-            fluency by 30! My Dota journey reached its pinnacle at 8800 MMR on
-            the SEA Immortal Leaderboards, forging deep friendships and
-            unforgettable memories along the way. While that competitive chapter
-            has closed, I'm grateful for the experiences and lessons it
-            provided. Now, I've channeled that same drive and determination into
-            my software engineering career, eagerly anticipating the challenges
-            and triumphs that lie ahead.
+            and Elden Ring. I&apos;m also on a journey to master Mandarin,
+            aiming for fluency by 30! My Dota journey reached its pinnacle at
+            8800 MMR on the SEA Immortal Leaderboards, forging deep friendships
+            and unforgettable memories along the way. While that competitive
+            chapter has closed, I&apos;m grateful for the experiences and
+            lessons it provided. Now, I&apos;ve channeled that same drive and
+            determination into my software engineering career, eagerly
+            anticipating the challenges and triumphs that lie ahead.
           </p>
         </div>
 
@@ -69,19 +76,19 @@ const About = () => {
           <p className="text-[#c0caf5] mb-4">
             My expertise lies in crafting scalable, responsive, and visually
             appealing web applications. From e-commerce platforms to data
-            manipulation with Python, I've honed a versatile skill set that
+            manipulation with Python, I&apos;ve honed a versatile skill set that
             includes:
           </p>
           <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5]">
-            <TechIcon Icon={FaReact} color="#00d8ff" />
-            <TechIcon Icon={SiNextdotjs} color="#ffffff" />
-            <TechIcon Icon={FaJs} color="#f7df1e" />
-            <TechIcon Icon={SiTypescript} color="#007acc" />
-            <TechIcon Icon={FaNode} color="#339933" />
-            <TechIcon Icon={SiCsharp} color="#239120" />
-            <TechIcon Icon={SiGo} color="#00ADD8" />
-            <TechIcon Icon={SiPython} color="#3776AB" />
-            <TechIcon Icon={SiNumpy} color="#013243" />
+            <TechIcon Icon={FaReact} />
+            <TechIcon Icon={SiNextdotjs} />
+            <TechIcon Icon={FaJs} />
+            <TechIcon Icon={SiTypescript} />
+            <TechIcon Icon={FaNode} />
+            <TechIcon Icon={SiCsharp} />
+            <TechIcon Icon={SiGo} />
+            <TechIcon Icon={SiPython} />
+            <TechIcon Icon={SiNumpy} />
           </div>
         </div>
 
@@ -96,7 +103,7 @@ const About = () => {
             significant profits trading assets on Solana and Ethereum.
           </p>
           <p className="text-[#c0caf5] mb-4">
-            To achieve this, I'm diving deep into:
+            To achieve this, I&apos;m diving deep into:
           </p>
           <ul className="list-disc list-inside text-[#c0caf5] mb-4 pl-4">
             <li>Lower-level programming and computer systems</li>
@@ -104,12 +111,12 @@ const About = () => {
             <li>Advanced mathematics for quantitative finance</li>
           </ul>
           <p className="text-[#c0caf5] mb-4">
-            This journey isn't just about becoming a quant; it's about gaining a
-            comprehensive understanding of computer systems at their core.
+            This journey isn&apos;t just about becoming a quant; it&apos;s about
+            gaining a comprehensive understanding of computer systems at their
+            core.
           </p>
           <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5]">
-            <TechIcon Icon={SiCplusplus} color="#00599C" />
-            <TechIcon Icon={SiNeovim} color="#57A143" />
+            <TechIcon Icon={SiCplusplus} />
           </div>
         </div>
 
@@ -118,7 +125,7 @@ const About = () => {
             Future Horizons
           </h2>
           <p className="text-[#c0caf5] mb-4">
-            Looking ahead, I'm excited about:
+            Looking ahead, I&apos;m excited about:
           </p>
           <ul className="list-disc list-inside text-[#c0caf5] mb-4 pl-4">
             <li>
@@ -126,8 +133,8 @@ const About = () => {
             </li>
             <li>Contributing to or creating a game engine</li>
             <li>
-              Becoming a T-shaped developer with deep specialization in my
-              chosen field
+              Learning CUDA for machine learning/vision so that I can use it in
+              finance and video games
             </li>
             <li>
               Learning C to deepen my understanding of low-level programming
@@ -142,9 +149,11 @@ const About = () => {
             day contributing to groundbreaking projects at companies like Valve.
           </p>
           <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5] mt-4">
-            <TechIcon Icon={SiC} color="#A8B9CC" />
-            <TechIcon Icon={SiRust} color="#000000" />
-            <TechIcon Icon={SiZig} color="#F7A41D" />
+            <TechIcon Icon={SiC} />
+            <TechIcon Icon={SiRust} />
+            <TechIcon Icon={SiZig} />
+            <TechIcon Icon={SiNvidia} />
+            <TechIcon Icon={SiValve} />
           </div>
         </div>
 
@@ -173,9 +182,15 @@ const About = () => {
               Roboto Mono
             </a>{" "}
             nerdfont, and primarily work on an Apple Silicon MacBook, preferring
-            its Unix-based OS for an optimal developer experience. I'm also open
-            and interested in trying out Arch Linux in the future.
+            its Unix-based OS for an optimal developer experience. I&apos;m also
+            open and interested in trying out Arch Linux in the future. I write
+            all my code these days in Neovim and my terminal emulator of choice
+            is Kitty.
           </p>
+          <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5] mt-4">
+            <TechIcon Icon={SiNeovim} />
+            <TechIcon Icon={IoTerminal} />
+          </div>
         </div>
 
         <div className="mb-8">
@@ -183,11 +198,12 @@ const About = () => {
             Beyond Coding
           </h2>
           <p className="text-[#c0caf5]">
-            When I'm not immersed in code, I enjoy diving into a wide range of
-            fiction. From Haruki Murakami's "Norwegian Wood" to Frank Herbert's
-            "Dune", I find inspiration and relaxation in diverse literary
-            worlds. I'm also an avid reader of Japanese light novels and manga,
-            which fuel my imagination and creativity.
+            When I&apos;m not immersed in code, I enjoy diving into a wide range
+            of fiction. From Haruki Murakami&apos;s &quot;Norwegian Wood&quot;
+            to Frank Herbert&apos;s &quot;Dune&quot;, I find inspiration and
+            relaxation in diverse literary worlds. I&apos;m also an avid reader
+            of Japanese light novels and manga, which fuel my imagination and
+            creativity.
           </p>
         </div>
 
@@ -196,8 +212,8 @@ const About = () => {
             Resource Dump
           </h2>
           <p className="text-[#c0caf5] mb-4">
-            Here are some resources I've found invaluable and some in my current
-            reading list:
+            Here are some resources I&apos;ve found invaluable and some in my
+            current reading list:
           </p>
           <ul className="list-disc list-inside text-[#c0caf5] mb-4 pl-4">
             <li>
@@ -330,8 +346,8 @@ const About = () => {
 
         <div className="bg-[#24283b] p-6 rounded-lg shadow-lg">
           <p className="text-[#ff757f] italic text-xl text-center">
-            "We must all suffer one of two things: the pain of discipline or the
-            pain of regret and disappointment." — Jim Rohn
+            &quot;We must all suffer one of two things: the pain of discipline
+            or the pain of regret and disappointment.&quot; — Jim Rohn
           </p>
         </div>
       </div>

@@ -9,14 +9,14 @@ const Work = () => {
           href="https://github.com/zteezy19/Ztube"
           target="_blank"
           rel="noopener noreferrer"
-          className="block mb-8 transition-colors duration-300 hover:bg-[#737aa2] cursor-pointer"
+          className="block mb-8 transition-colors duration-300 hover:bg-[#24263b] cursor-pointer"
         >
           <div className="p-4">
             <h2 className="text-2xl font-semibold text-[#7aa2f7] mb-4">
               Ztube
               <FiGithub className="ml-2 inline-block" size={24} />
             </h2>
-            <h3 className="italic text-[#ff757f] mb-2">
+            <h3 className="italic text-[#3d59a1] mb-2">
               Nextjs | TypeScript | Express | ffmpeg
             </h3>
             <p className="text-[#b4f9f8] mb-4">
@@ -32,14 +32,14 @@ const Work = () => {
           href="https://github.com/zteezy19/zteezy-portfolio"
           target="_blank"
           rel="noopener noreferrer"
-          className="block mb-8 transition-colors duration-300 hover:bg-[#737aa2] cursor-pointer"
+          className="block mb-8 transition-colors duration-300 hover:bg-[#24263b] cursor-pointer"
         >
           <div className="p-4">
             <h2 className="text-2xl font-semibold text-[#7aa2f7] mb-4">
               ZTZ Portfolio
               <FiGithub className="ml-2 inline-block" size={24} />
             </h2>
-            <h3 className="italic text-[#ff757f] mb-2">
+            <h3 className="italic text-[#3d59a1] mb-2">
               React | JavaScript | Express | Tailwind CSS
             </h3>
             <p className="text-[#b4f9f8] mb-4">
@@ -52,14 +52,14 @@ const Work = () => {
           href="https://github.com/zteezy19/CSIT321-FYP"
           target="_blank"
           rel="noopener noreferrer"
-          className="block mb-8 transition-colors duration-300 hover:bg-[#737aa2] cursor-pointer"
+          className="block mb-8 transition-colors duration-300 hover:bg-[#24263b] cursor-pointer"
         >
           <div className="p-4">
             <h2 className="text-2xl font-semibold text-[#7aa2f7] mb-4">
               Medical Appointment System
               <FiGithub className="ml-2 inline-block" size={24} />
             </h2>
-            <h3 className="italic text-[#ff757f] mb-2">
+            <h3 className="italic text-[#3d59a1] mb-2">
               Java | Spring | React | TypeScript
             </h3>
             <p className="text-[#b4f9f8] mb-4">

@@ -96,7 +96,7 @@ const Contact = () => {
             Icon={EmailIcon}
             mainText="Email Me"
             subText="What's up?"
-            link="zteezy.dev@gmail.com"
+            link="mailto:zteezy.dev@gmail.com"
           />
         </div>
       </div>

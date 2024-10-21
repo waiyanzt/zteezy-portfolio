@@ -94,13 +94,13 @@ const About = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#7aa2f7]">
-            🌟 Goals & Aspirations
+            🌟 North Star Goal
           </h2>
           <p className="text-[#c0caf5] mb-4">
-            My current ambition is to break into quant finance as a Quantitative
-            Software Engineer. This goal is fueled by my successful experience
-            as a self-taught trader during the COVID lockdowns, where I made
-            significant profits trading assets on Solana and Ethereum.
+            I aim to become an elite in my field of profession; while working on
+            sophisticated and cutting-edge systems.I am hoping to build software
+            that would uplift and touch the lives of millions of people, while
+            also making a comfortable living with my loved ones.{" "}
           </p>
           <p className="text-[#c0caf5] mb-4">
             To achieve this, I&apos;m diving deep into:
@@ -145,8 +145,13 @@ const About = () => {
             </li>
           </ul>
           <p className="text-[#c0caf5]">
-            Inspired by programming legends like John Carmack, I dream of one
-            day contributing to groundbreaking projects at companies like Valve.
+            John Carmack is a well-known figure in the industry for his
+            algorithm in Quake and his skill as a developer is undeniable. There
+            is also ConcernedApe; whose game Stardew Valley is an amazing game
+            to relax with on a cosy Sunday afternoon with your partner. They are
+            inspiring figures for me and I wish to work on video games or work
+            at an amazing game studio like Valve at some point in my career. I
+            have nothing but respect for the Steam platform and Gabe Newell.{" "}
           </p>
           <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5] mt-4">
             <TechIcon Icon={SiC} />
@@ -181,11 +186,9 @@ const About = () => {
             >
               Roboto Mono
             </a>{" "}
-            nerdfont, and primarily work on an Apple Silicon MacBook, preferring
-            its Unix-based OS for an optimal developer experience. I&apos;m also
-            open and interested in trying out Arch Linux in the future. I write
-            all my code these days in Neovim and my terminal emulator of choice
-            is Kitty.
+            nerdfont, and primarily work on an Apple Silicon MacBook but my main
+            desktop runs Arch Linux with i3. I think I will stay with Arch for a
+            long time until I'm forced to migrate to a different distro.{" "}
           </p>
           <div className="flex flex-wrap gap-6 text-4xl text-[#c0caf5] mt-4">
             <TechIcon Icon={SiNeovim} />

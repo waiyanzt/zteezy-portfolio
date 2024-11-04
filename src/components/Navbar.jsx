@@ -23,7 +23,7 @@ const Navbar = () => {
       const currentScrollPos = window.scrollY;
       setVisible(
         (prevScrollPos > currentScrollPos && currentScrollPos > 0) ||
-          currentScrollPos < 10
+          currentScrollPos < 10,
       );
       setPrevScrollPos(currentScrollPos);
     };
@@ -89,7 +89,7 @@ const Navbar = () => {
   }, [location]);
 
   const navItems = [
-    { label: "Notes", href: "https://zteezy.me/", external: true },
+    { label: "Blog", href: "https://zteezy.me/", external: true },
     { label: "Github", href: "https://github.com/zteezy19", external: true },
     { label: "Work", action: () => handleNavigation("work") },
     { label: "About", action: () => handleNavigation("about") },
@@ -151,7 +151,7 @@ const Navbar = () => {
                   >
                     {item.label}
                   </button>
-                )
+                ),
               )}
               <Link
                 to="/contact"
@@ -190,7 +190,7 @@ const Navbar = () => {
                 >
                   {item.label}
                 </button>
-              )
+              ),
             )}
             <Link
               to="/contact"

@@ -90,7 +90,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Blog", href: "https://zteezy.me/", external: true },
-    { label: "Github", href: "https://github.com/zteezy19", external: true },
+    { label: "Github", href: "https://github.com/waiyanzt", external: true },
     { label: "Work", action: () => handleNavigation("work") },
     { label: "About", action: () => handleNavigation("about") },
   ];

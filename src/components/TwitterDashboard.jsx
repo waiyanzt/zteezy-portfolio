@@ -4,7 +4,7 @@ const TwitterDashboard = () => {
   return (
     <div className="group hover:bg-[#24263b] transition-colors duration-300">
       <a
-        href="https://x.com/ztzdotdev"
+        href="https://x.com/zteezy11"
         target="_blank"
         rel="noopener noreferrer"
         className="block py-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 cursor-pointer"
